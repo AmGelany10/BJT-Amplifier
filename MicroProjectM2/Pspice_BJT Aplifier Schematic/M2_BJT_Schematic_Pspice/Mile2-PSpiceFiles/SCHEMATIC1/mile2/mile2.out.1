@@ -1,0 +1,70 @@
+
+**** 01/08/21 19:35:35 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-mile2"  [ D:\AmG\ENG\ENG 4th Year\7th\ELCT 508 Communication Microelectronics\Final\Mile2\Mile2-PSpiceFiles\
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "mile2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\abdog\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 5us 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source MILE2
+R_R1         N14659 N143380  10k TC=0,0 
+R_R2         N14659 N143540  10k TC=0,0 
+R_Re1         0 N15050  3.3k TC=0,0 
+R_RL1         N15050 N15157  10k TC=0,0 
+R_Re2         0 N14873  3.3k TC=0,0 
+R_RL3         N14873 N15149  10k TC=0,0 
+R_RL2         0 N15157  10k TC=0,0 
+V_Vsq         N14659 0  
++PULSE 0 5 0 0.03us 0.03us 3u 1us
+V_Vsin         N15018 0  
++SIN 0 5 7000k 0 0 0
+Q_Q3         N15018 N143380 N15050 Q2N2222
+Q_Q4         N15018 N143540 N14873 Q2N2907A
+R_R6         N15149 N15393  10k TC=0,0 
+R_RL6         N16490 N16400  10k TC=0,0 
+R_Re3         0 N16226  3.3k TC=0,0 
+R_Re4         0 N16490  3.3k TC=0,0 
+X_U4         N16234 N16400 N16172 N16408 N16308 uA741
+R_R7         N16242 N162000  10k TC=0,0 
+Q_Q6         N16156 N164640 N16490 Q2N2907A
+V_Vsq1         N16242 0  
++PULSE 0 5 0 0.03us 0.03us 3u 1us
+R_R9         N16400 N16308  10k TC=0,0 
+R_RL5         0 N16234  10k TC=0,0 
+V_Vsin1         N16156 0  AC 5
++SIN 0 5 7000k 0 0 0
+R_R8         N16242 N164640  10k TC=0,0 
+Q_Q5         N16156 N162000 N16226 Q2N2222
+V_V6         N16172 0 5
+R_RL4         N16226 N16234  10k TC=0,0 
+V_V7         0 N16408 5
+
+**** RESUMING mile2.cir ****
+.END
+
+ERROR(ORPSIM-15141): Less than 2 connections at node N15393.
+

@@ -1,0 +1,250 @@
+
+**** 01/09/21 18:40:40 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-mile2"  [ D:\AmG\ENG\ENG 4th Year\7th\ELCT 508 Communication Microelectronics\Final\Project\Mile2\mile2-pspi
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "mile2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\abdog\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 40us  0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source MILE2
+R_R1         N14659 N143380  10k TC=0,0 
+R_R2         N14659 N143540  10k TC=0,0 
+R_Re1         0 N15050  3.3k TC=0,0 
+R_RL1         N15050 N15157  10k TC=0,0 
+R_Re2         0 N14873  3.3k TC=0,0 
+R_RL3         N14873 N15149  10k TC=0,0 
+R_RL2         0 N15157  10k TC=0,0 
+V_V3         N15335 0 5
+V_V5         0 N15399 5
+V_Vsq         N14659 0  
++PULSE -5 5 0 0.03us 0.03us 3u 1us
+V_Vsin         N15018 0  
++SIN 0 5 700k 0 0 0
+Q_Q3         N15018 N143380 N15050 Q2N2222
+Q_Q4         N15018 N143540 N14873 Q2N2907A
+R_R6         N15149 N15387  10k TC=0,0 
+X_U3         N15157 N15149 N15335 N15399 N15387 uA741
+R_RL6         N16490 N16400  10k TC=0,0 
+R_Re3         0 N16226  3.3k TC=0,0 
+R_Re4         0 N16490  3.3k TC=0,0 
+X_U4         N16234 N16400 N16172 N16408 N16308 uA741
+R_R7         N16242 N162000  10k TC=0,0 
+Q_Q6         N16156 N164640 N16490 Q2N2907A
+V_Vsq1         N16242 0  
++PULSE 0 5 0 0.03us 0.03us 3u 1us
+R_R9         N16400 N16308  10k TC=0,0 
+R_RL5         0 N16234  10k TC=0,0 
+V_Vsin1         N16156 0  AC 5
++SIN 0 5 7000k 0 0 0
+R_R8         N16242 N164640  10k TC=0,0 
+Q_Q5         N16156 N162000 N16226 Q2N2222
+V_V6         N16172 0 5
+R_RL4         N16226 N16234  10k TC=0,0 
+V_V7         0 N16408 5
+
+**** RESUMING mile2.cir ****
+.END
+
+**** 01/09/21 18:40:40 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-mile2"  [ D:\AmG\ENG\ENG 4th Year\7th\ELCT 508 Communication Microelectronics\Final\Project\Mile2\mile2-pspi
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U3.dx         X_U3.dy         X_U4.dx         X_U4.dy         
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03    1               1.000000E-03 
+         CJO                   10.000000E-12                   10.000000E-12 
+
+
+**** 01/09/21 18:40:40 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-mile2"  [ D:\AmG\ENG\ENG 4th Year\7th\ELCT 508 Communication Microelectronics\Final\Project\Mile2\mile2-pspi
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Q2N2222         Q2N2907A        X_U3.qx         X_U4.qx         
+               NPN             PNP             NPN             NPN             
+       LEVEL    1               1               1               1            
+          IS   14.340000E-15  650.600000E-18  800.000000E-18  800.000000E-18 
+          BF  255.9           231.7            93.75           93.75         
+          NF    1               1               1               1            
+         VAF   74.03          115.7                                          
+         IKF     .2847          1.079                                        
+         ISE   14.340000E-15   54.810000E-15                                 
+          NE    1.307           1.829                                        
+          BR    6.092           3.563           1               1            
+          NR    1               1               1               1            
+         ISS    0               0               0               0            
+          RB   10              10                                            
+          RE    0               0               0               0            
+          RC    1                .715           0               0            
+         CJE   22.010000E-12   19.820000E-12    0               0            
+         VJE     .75             .75             .75             .75         
+         MJE     .377            .3357                                       
+         CJC    7.306000E-12   14.760000E-12    0               0            
+         VJC     .75             .75             .75             .75         
+         MJC     .3416           .5383           .33             .33         
+        XCJC    1               1               1               1            
+         CJS    0               0               0               0            
+         VJS     .75             .75             .75             .75         
+          TF  411.100000E-12  603.700000E-12                                 
+         XTF    3               1.7                                          
+         VTF    1.7             5                                            
+         ITF     .6              .65                                         
+          TR   46.910000E-09  111.300000E-09                                 
+         XTB    1.5             1.5                                          
+          KF    0               0               0               0            
+          AF    1               1               1               1            
+          CN    2.42            2.2             2.42            2.42         
+           D     .87             .52             .87             .87         
+
+
+WARNING(ORPSIM-15452): Pulse Period < (Rise Time + Fall Time + Pulse Width) for V_Vsq.
+
+WARNING(ORPSIM-15452): Pulse Period < (Rise Time + Fall Time + Pulse Width) for V_Vsq1.
+
+WARNING(ORPSIM-15452): Pulse Period < (Rise Time + Fall Time + Pulse Width) for V_Vsq.
+
+WARNING(ORPSIM-15452): Pulse Period < (Rise Time + Fall Time + Pulse Width) for V_Vsq1.
+
+**** 01/09/21 18:40:40 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-mile2"  [ D:\AmG\ENG\ENG 4th Year\7th\ELCT 508 Communication Microelectronics\Final\Project\Mile2\mile2-pspi
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N14659)   -5.0000 (N14873)-420.0E-06 (N15018)    0.0000 (N15050)-112.9E-06     
+
+(N15149)-435.9E-06 (N15157)-455.1E-06 (N15335)    5.0000 (N15387) 346.0E-06     
+
+(N15399)   -5.0000 (N16156)    0.0000 (N16172)    5.0000 (N16226)-112.9E-06     
+
+(N16234)-455.1E-06 (N16242)    0.0000 (N16308) 34.14E-06 (N16400)-435.9E-06     
+
+(N16408)   -5.0000 (N16490)-108.1E-06 (X_U3.6)-33.99E-09 (X_U3.7) 349.9E-06     
+
+(X_U3.8) 349.9E-06 (X_U3.9)    0.0000 (X_U4.6)-4.231E-09 (X_U4.7) 36.49E-06     
+
+(X_U4.8) 36.49E-06 (X_U4.9)    0.0000 (N143380)   -5.0000                       
+
+(N143540)    -.7407                   (N162000)-486.7E-15                       
+
+(N164640)-1.256E-12                   (X_U3.10)    -.6081                       
+
+(X_U3.11)    4.9603                   (X_U3.12)    4.9603                       
+
+(X_U3.13)    -.5942                   (X_U3.14)    -.5942                       
+
+(X_U3.53)    4.0000                   (X_U3.54)   -4.0000                       
+
+(X_U3.90) 78.18E-06                   (X_U3.91)   40.0000                       
+
+(X_U3.92)  -40.0000                   (X_U3.99)    0.0000                       
+
+(X_U4.10)    -.6081                   (X_U4.11)    4.9603                       
+
+(X_U4.12)    4.9603                   (X_U4.13)    -.5942                       
+
+(X_U4.14)    -.5942                   (X_U4.53)    4.0000                       
+
+(X_U4.54)   -4.0000                   (X_U4.90) 47.00E-06                       
+
+(X_U4.91)   40.0000                   (X_U4.92)  -40.0000                       
+
+(X_U4.99)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V3        -5.656E-04
+    V_V5        -5.658E-04
+    V_Vsq        4.259E-04
+    V_Vsin      -4.258E-04
+    V_Vsq1      -1.743E-16
+    V_Vsin1     -2.865E-16
+    V_V6        -5.656E-04
+    V_V7        -5.658E-04
+    X_U3.vb     -3.399E-13
+    X_U3.vc      4.000E-12
+    X_U3.ve      4.549E-12
+    X_U3.vlim    7.818E-08
+    X_U3.vlp    -4.000E-11
+    X_U3.vln    -4.000E-11
+    X_U4.vb     -4.231E-14
+    X_U4.vc      4.001E-12
+    X_U4.ve      4.548E-12
+    X_U4.vlim    4.700E-08
+    X_U4.vlp    -4.000E-11
+    X_U4.vln    -4.000E-11
+
+    TOTAL POWER DISSIPATION   1.34E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 01/09/21 18:40:40 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-mile2"  [ D:\AmG\ENG\ENG 4th Year\7th\ELCT 508 Communication Microelectronics\Final\Project\Mile2\mile2-pspi
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .97
+

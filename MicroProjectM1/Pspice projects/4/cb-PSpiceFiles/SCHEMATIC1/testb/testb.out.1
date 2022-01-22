@@ -1,0 +1,50 @@
+
+**** 12/30/20 13:48:30 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-testb"  [ C:\Users\abdog\Desktop\4\cb-PSpiceFiles\SCHEMATIC1\testb.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "testb.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\abdog\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 1s 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source CB
+R_R1         N14488 N143090  100 TC=0,0 
+R_R2         N143251 N14724  2.2k TC=0,0 
+R_R3         0 N14813  51k TC=0,0 
+R_R4         N143571 N14501  4.3k TC=0,0 
+C_C1         N143090 N14501  1u  TC=0,0 
+C_C2         N14724 N14813  u  TC=0,0 
+-------------------------------$
+ERROR(ORPSIM-16152): Invalid number: Error while converting token 'TC' to double value. Token can be a constant or expression
+V_V1         N143251 0 5Vdc
+V_V2         N143571 0 -5Vdc
+V_V3         N14488 0  AC 10
++SIN 5 10 10 0 0 0
+Q_Q2         N14724 0 N14501 Q2N2222
+
+**** RESUMING testb.cir ****
+.END
+

@@ -1,0 +1,16 @@
+.ALIASES
+V_V1            V1(+=N00075 -=0 ) CN @ALI.SCHEMATIC1(sch_1):I00003@SOURCE.VAC.Normal(chips)
+R_R1            R1(1=N00075 2=N00109 ) CN @ALI.SCHEMATIC1(sch_1):I00031@ANALOG.R.Normal(chips)
+C_C1            C1(1=N00109 2=N00182 ) CN @ALI.SCHEMATIC1(sch_1):I00053@ANALOG.C.Normal(chips)
+R_R2            R2(1=0 2=N00182 ) CN @ALI.SCHEMATIC1(sch_1):I00136@ANALOG.R.Normal(chips)
+Q_Q1            Q1(c=N00817 b=N00182 e=N00539 ) CN @ALI.SCHEMATIC1(sch_1):I00270@EVAL.Q2N2222.Normal(chips)
+Q_Q2            Q2(c=N00817 b=0 e=N00182 ) CN @ALI.SCHEMATIC1(sch_1):I00296@EVAL.Q2N2222.Normal(chips)
+R_R3            R3(1=N003221 2=N00182 ) CN @ALI.SCHEMATIC1(sch_1):I00322@ANALOG.R.Normal(chips)
+V_VEE           VEE(+=N003221 -=0 ) CN @ALI.SCHEMATIC1(sch_1):I00376@SOURCE.VDC.Normal(chips)
+V_-VCC          -VCC(+=N00539 -=0 ) CN @ALI.SCHEMATIC1(sch_1):I00568@SOURCE.VDC.Normal(chips)
+C_C3            C3(1=0 2=N00539 ) CN @ALI.SCHEMATIC1(sch_1):I00709@ANALOG.C.Normal(chips)
+R_R4            R4(1=N00817 2=N01049 ) CN @ALI.SCHEMATIC1(sch_1):I00783@ANALOG.R.Normal(chips)
+V_+VCC          +VCC(+=N01049 -=0 ) CN @ALI.SCHEMATIC1(sch_1):I01003@SOURCE.VDC.Normal(chips)
+C_C4            C4(1=N00817 2=N01164 ) CN @ALI.SCHEMATIC1(sch_1):I01079@ANALOG.C.Normal(chips)
+R_R5            R5(1=0 2=N01164 ) CN @ALI.SCHEMATIC1(sch_1):I01130@ANALOG.R.Normal(chips)
+.ENDALIASES

@@ -1,0 +1,242 @@
+
+**** 01/08/21 20:30:36 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Mil2"  [ D:\AmG\ENG\ENG 4th Year\7th\ELCT 508 Communication Microelectronics\Final\Mile2\Mile2-PSpiceFiles\S
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Mil2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\abdog\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 5us 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source MILE2
+R_R1         N14659 N143380  10k TC=0,0 
+R_R2         N14659 N143540  10k TC=0,0 
+R_Re1         0 N15050  3.3k TC=0,0 
+R_RL1         N15050 N15149  10k TC=0,0 
+R_Re2         0 N14873  3.3k TC=0,0 
+R_RL3         N14873 N15149  10k TC=0,0 
+V_Vsq         N14659 0  
++PULSE -5 5 0 0.03us 0.03us 0.3n 1us
+V_Vsin         N15018 0  
++SIN 0 5 7000k 0 0 0
+R_RL6         N16490 N16400  10k TC=0,0 
+R_Re3         0 N16226  3.3k TC=0,0 
+R_Re4         0 N16490  3.3k TC=0,0 
+X_U4         N16234 N16400 N16172 N16408 N16308 uA741
+R_R7         N16242 N162000  10k TC=0,0 
+Q_Q6         N16156 N164640 N16490 Q2N2907A
+V_Vsq1         N16242 0  
++PULSE 0 5 0 0.03us 0.03us 3u 1us
+R_R9         N16400 N16308  10k TC=0,0 
+R_RL5         0 N16234  10k TC=0,0 
+V_Vsin1         N16156 0  AC 5
++SIN 0 5 7000k 0 0 0
+R_R8         N16242 N164640  10k TC=0,0 
+Q_Q5         N16156 N162000 N16226 Q2N2222
+V_V6         N16172 0 5
+R_RL4         N16226 N16234  10k TC=0,0 
+V_V7         0 N16408 5
+Q_Q7         N15018 N143380 N15050 QbreakN 
+Q_Q8         N15018 N143540 N14873 QbreakP 
+
+**** RESUMING Mil2.cir ****
+.END
+
+**** 01/08/21 20:30:36 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Mil2"  [ D:\AmG\ENG\ENG 4th Year\7th\ELCT 508 Communication Microelectronics\Final\Mile2\Mile2-PSpiceFiles\S
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U4.dx         X_U4.dy         
+          IS  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03 
+         CJO                   10.000000E-12 
+
+
+**** 01/08/21 20:30:36 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Mil2"  [ D:\AmG\ENG\ENG 4th Year\7th\ELCT 508 Communication Microelectronics\Final\Mile2\Mile2-PSpiceFiles\S
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Q2N2907A        Q2N2222         QbreakN         QbreakP         
+               PNP             NPN             NPN             PNP             
+       LEVEL    1               1               1               1            
+          IS  650.600000E-18   14.340000E-15  100.000000E-18  100.000000E-18 
+          BF  231.7           255.9           100             100            
+          NF    1               1               1               1            
+         VAF  115.7            74.03                                         
+         IKF    1.079            .2847                                       
+         ISE   54.810000E-15   14.340000E-15                                 
+          NE    1.829           1.307                                        
+          BR    3.563           6.092           1               1            
+          NR    1               1               1               1            
+         ISS    0               0               0               0            
+          RB   10              10                                            
+          RE    0               0               0               0            
+          RC     .715           1               0               0            
+         CJE   19.820000E-12   22.010000E-12    0               0            
+         VJE     .75             .75             .75             .75         
+         MJE     .3357           .377                                        
+         CJC   14.760000E-12    7.306000E-12    0               0            
+         VJC     .75             .75             .75             .75         
+         MJC     .5383           .3416           .33             .33         
+        XCJC    1               1               1               1            
+         CJS    0               0               0               0            
+         VJS     .75             .75             .75             .75         
+          TF  603.700000E-12  411.100000E-12                                 
+         XTF    1.7             3                                            
+         VTF    5               1.7                                          
+         ITF     .65             .6                                          
+          TR  111.300000E-09   46.910000E-09                                 
+         XTB    1.5             1.5                                          
+          KF    0               0               0               0            
+          AF    1               1               1               1            
+          CN    2.2             2.42            2.42            2.2          
+           D     .52             .87             .87             .52         
+
+
+               X_U4.qx         
+               NPN             
+       LEVEL    1            
+          IS  800.000000E-18 
+          BF   93.75         
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+WARNING(ORPSIM-15452): Pulse Period < (Rise Time + Fall Time + Pulse Width) for V_Vsq1.
+
+WARNING(ORPSIM-15452): Pulse Period < (Rise Time + Fall Time + Pulse Width) for V_Vsq1.
+
+**** 01/08/21 20:30:36 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Mil2"  [ D:\AmG\ENG\ENG 4th Year\7th\ELCT 508 Communication Microelectronics\Final\Mile2\Mile2-PSpiceFiles\S
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N14659)   -5.0000 (N14873)-252.0E-06 (N15018)    0.0000 (N15050)-35.69E-06     
+
+(N15149)-143.8E-06 (N16156)    0.0000 (N16172)    5.0000 (N16226)-112.9E-06     
+
+(N16234)-455.1E-06 (N16242)    0.0000 (N16308) 34.14E-06 (N16400)-435.9E-06     
+
+(N16408)   -5.0000 (N16490)-108.1E-06 (X_U4.6)-4.156E-09 (X_U4.7) 36.49E-06     
+
+(X_U4.8) 36.49E-06 (X_U4.9)    0.0000 (N143380)   -5.0000                       
+
+(N143540)    -.7518                   (N162000)-486.7E-15                       
+
+(N164640)-1.256E-12                   (X_U4.10)    -.6081                       
+
+(X_U4.11)    4.9603                   (X_U4.12)    4.9603                       
+
+(X_U4.13)    -.5942                   (X_U4.14)    -.5942                       
+
+(X_U4.53)    4.0000                   (X_U4.54)   -4.0000                       
+
+(X_U4.90) 47.00E-06                   (X_U4.91)   40.0000                       
+
+(X_U4.92)  -40.0000                   (X_U4.99)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vsq        4.248E-04
+    V_Vsin      -4.247E-04
+    V_Vsq1      -1.743E-16
+    V_Vsin1     -2.865E-16
+    V_V6        -5.656E-04
+    V_V7        -5.658E-04
+    X_U4.vb     -4.156E-14
+    X_U4.vc      4.001E-12
+    X_U4.ve      4.548E-12
+    X_U4.vlim    4.700E-08
+    X_U4.vlp    -4.000E-11
+    X_U4.vln    -4.000E-11
+
+    TOTAL POWER DISSIPATION   7.78E-03  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 01/08/21 20:30:36 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Mil2"  [ D:\AmG\ENG\ENG 4th Year\7th\ELCT 508 Communication Microelectronics\Final\Mile2\Mile2-PSpiceFiles\S
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .14
+

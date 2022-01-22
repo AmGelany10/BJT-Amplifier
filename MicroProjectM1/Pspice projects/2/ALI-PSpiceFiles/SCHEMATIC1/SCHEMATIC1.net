@@ -1,0 +1,15 @@
+* source ALI
+V_V1         N00075 0 DC 0Vdc AC 15Vac 
+R_R1         N00075 N00109  0.1k  
+C_C1         N00109 N00182  1u  
+R_R2         0 N00182  2k  
+Q_Q1         N00817 N00182 N00539 Q2N2222
+Q_Q2         N00817 0 N00182 Q2N2222
+R_R3         N003221 N00182  4.3k  
+V_VEE         N003221 0 0Vdc
+V_-VCC         N00539 0 -5Vdc
+C_C3         0 N00539  1u  
+R_R4         N00817 N01049  2.2k  
+V_+VCC         N01049 0 5Vdc
+C_C4         N00817 N01164  1u  
+R_R5         0 N01164  1k  

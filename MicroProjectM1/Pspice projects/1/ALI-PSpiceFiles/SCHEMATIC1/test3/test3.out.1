@@ -1,0 +1,164 @@
+
+**** 12/30/20 15:10:09 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-test3"  [ c:\users\abdog\desktop\1\ali-PSpiceFiles\SCHEMATIC1\test3.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "test3.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\abdog\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 0.009ns 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source ALI
+R_R1         N00075 N00109  200  
+R_R2         0 N00109  2k  
+Q_Q1         N00817 N07291 N00539 Q2N2222
+Q_Q2         N00817 0 N00109 Q2N2222
+V_VEE         N00109 0 -5Vdc
+V_-VCC         N00539 0 0Vdc
+C_C3         0 N00539  1m  
+R_R4         N00817 N01049  2.2k  
+V_+VCC         N01049 0 5Vdc
+C_C4         N00817 N01164  1m  
+R_R5         0 N01164  2k  
+V_V1         N00075 0  AC 10
++SIN 5 10 10 0 0 0
+R_R6         N00109 N07291  9.8k  
+
+**** RESUMING test3.cir ****
+.END
+
+**** 12/30/20 15:10:09 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-test3"  [ c:\users\abdog\desktop\1\ali-PSpiceFiles\SCHEMATIC1\test3.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Q2N2222         
+               NPN             
+       LEVEL    1            
+          IS   14.340000E-15 
+          BF  255.9          
+          NF    1            
+         VAF   74.03         
+         IKF     .2847       
+         ISE   14.340000E-15 
+          NE    1.307        
+          BR    6.092        
+          NR    1            
+         ISS    0            
+          RB   10            
+          RE    0            
+          RC    1            
+         CJE   22.010000E-12 
+         VJE     .75         
+         MJE     .377        
+         CJC    7.306000E-12 
+         VJC     .75         
+         MJC     .3416       
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          TF  411.100000E-12 
+         XTF    3            
+         VTF    1.7          
+         ITF     .6          
+          TR   46.910000E-09 
+         XTB    1.5          
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 12/30/20 15:10:09 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-test3"  [ c:\users\abdog\desktop\1\ali-PSpiceFiles\SCHEMATIC1\test3.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00075)    5.0000 (N00109)   -5.0000 (N00539)    0.0000 (N00817)   -4.9812     
+
+(N01049)    5.0000 (N01164)    0.0000 (N07291)   -5.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_VEE        4.709E-01
+    V_-VCC      -5.023E-12
+    V_+VCC      -4.537E-03
+    V_V1        -5.000E-02
+
+    TOTAL POWER DISSIPATION   2.63E+00  WATTS
+
+
+ERROR(ORPSIM-15138): Convergence problem in Transient Analysis at Time =  1.805E-15.
+         Time step =  4.236E-24, minimum allowable step size =  9.000E-24
+
+  These voltages failed to converge:
+
+    V(N00817)                 =     5.000V  \   437.86MV
+    V(N01164)                 =      9.98V  \   437.86MV
+
+  These supply currents failed to converge:
+
+    I(V_VEE)                  =    -37.00A  \   437.86MA
+    I(V_-VCC)                 =   -4.761mA  \   437.86MA
+    I(V_+VCC)                 =         0A  \   199.03KA
+
+  These devices failed to converge:
+    Q_Q1      Q_Q2      
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00075)    5.0000 (N00109)   -5.0000 (N00539)    0.0000 (N00817)    5.0000     
+
+(N01049)    5.0000 (N01164)    9.9812 (N07291)   -2.2755 
+
+
+**** Interrupt ****

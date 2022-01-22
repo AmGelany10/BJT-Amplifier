@@ -1,0 +1,17 @@
+* source ALI
+R_R1         N00075 N00109  200  
+R_R2         0 N00109  2k  
+Q_Q1         N00817 N07291 N002702 Q2N2222
+Q_Q2         N00817 0 N00109 Q2N2222
+V_VEE         N003760 0 -5Vdc
+V_-VCC         N00590 0 0Vdc
+C_C3         0 N00590  1m  
+R_R4         N00817 N01049  2.2k  
+V_+VCC         N01049 0 5Vdc
+C_C4         N00817 N01164  1u  
+R_R5         0 N01164  2k  
+V_V1         N00075 0  AC 0
++SIN 0.7u 10m 100 0 0 0
+R_R6         N00109 N07291  9.8k  
+I_I1         N002702 N00590 DC 1mAdc  
+R_R7         N003760 N00109  1k  
